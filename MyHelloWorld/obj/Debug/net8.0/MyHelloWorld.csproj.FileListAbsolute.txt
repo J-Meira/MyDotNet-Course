@@ -1,0 +1,14 @@
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyHelloWorld\bin\Debug\net8.0\MyHelloWorld.exe
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyHelloWorld\bin\Debug\net8.0\MyHelloWorld.deps.json
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyHelloWorld\bin\Debug\net8.0\MyHelloWorld.runtimeconfig.json
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyHelloWorld\bin\Debug\net8.0\MyHelloWorld.dll
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyHelloWorld\bin\Debug\net8.0\MyHelloWorld.pdb
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyHelloWorld\obj\Debug\net8.0\MyHelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyHelloWorld\obj\Debug\net8.0\MyHelloWorld.AssemblyInfoInputs.cache
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyHelloWorld\obj\Debug\net8.0\MyHelloWorld.AssemblyInfo.cs
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyHelloWorld\obj\Debug\net8.0\MyHelloWorld.csproj.CoreCompileInputs.cache
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyHelloWorld\obj\Debug\net8.0\MyHelloWorld.dll
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyHelloWorld\obj\Debug\net8.0\refint\MyHelloWorld.dll
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyHelloWorld\obj\Debug\net8.0\MyHelloWorld.pdb
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyHelloWorld\obj\Debug\net8.0\MyHelloWorld.genruntimeconfig.cache
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyHelloWorld\obj\Debug\net8.0\ref\MyHelloWorld.dll
