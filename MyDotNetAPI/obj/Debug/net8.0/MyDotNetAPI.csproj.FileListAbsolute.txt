@@ -1,0 +1,7 @@
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyDotNetApi\obj\Debug\net8.0\MyDotNetAPI.csproj.AssemblyReference.cache
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyDotNetApi\obj\Debug\net8.0\MyDotNetAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyDotNetApi\obj\Debug\net8.0\MyDotNetAPI.AssemblyInfoInputs.cache
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyDotNetApi\obj\Debug\net8.0\MyDotNetAPI.AssemblyInfo.cs
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyDotNetApi\obj\Debug\net8.0\MyDotNetAPI.csproj.CoreCompileInputs.cache
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyDotNetApi\obj\Debug\net8.0\MyDotNetAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jonathan.meira\Repositories\DotNet-Course\MyDotNetApi\obj\Debug\net8.0\MyDotNetAPI.MvcApplicationPartsAssemblyInfo.cache
