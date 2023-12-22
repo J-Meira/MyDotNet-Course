@@ -11,10 +11,10 @@ public class WeatherForecastController : ControllerBase
       "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
   };
 
-  [HttpGet("", Name = "GetWeatherForecast")]
-  public IEnumerable<WeatherForecast> GetFive()
+  [HttpGet("/{forecastCount}", Name = "GetWeatherForecast")]
+  public IEnumerable<WeatherForecast> GetForecast(int forecastCount)
   {
-    var forecast = Enumerable.Range(1, 2).Select(index =>
+    var forecast = Enumerable.Range(1, forecastCount).Select(index =>
       new WeatherForecast
       (
           DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
