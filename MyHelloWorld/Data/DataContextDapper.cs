@@ -10,7 +10,7 @@ namespace MyHelloWorld.Data
     private string _connectionString;
 
     public DataContextDapper(IConfiguration config){
-      _connectionString = config.GetConnectionString("DefaultConnection");
+      _connectionString = config.GetConnectionString("DefaultConnection")??"";
     }
     public IEnumerable<T> LoadData<T>(string sql)
     {

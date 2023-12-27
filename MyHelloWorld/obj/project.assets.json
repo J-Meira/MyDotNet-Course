@@ -3145,11 +3145,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jonathan.meira\\Repositories\\DotNet-Course\\MyHelloWorld\\MyHelloWorld.csproj",
+      "projectUniqueName": "C:\\Users\\jonathan.meira\\Repositories\\MyDotNet-Course\\MyHelloWorld\\MyHelloWorld.csproj",
       "projectName": "MyHelloWorld",
-      "projectPath": "C:\\Users\\jonathan.meira\\Repositories\\DotNet-Course\\MyHelloWorld\\MyHelloWorld.csproj",
+      "projectPath": "C:\\Users\\jonathan.meira\\Repositories\\MyDotNet-Course\\MyHelloWorld\\MyHelloWorld.csproj",
       "packagesPath": "C:\\Users\\jonathan.meira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jonathan.meira\\Repositories\\DotNet-Course\\MyHelloWorld\\obj\\",
+      "outputPath": "C:\\Users\\jonathan.meira\\Repositories\\MyDotNet-Course\\MyHelloWorld\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jonathan.meira\\AppData\\Roaming\\NuGet\\NuGet.Config",

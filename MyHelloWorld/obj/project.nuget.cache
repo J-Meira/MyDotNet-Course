@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hz6+1crKYRBPe5xk/NF8sfmrEGOU+7OZb2t9FIoWYCg3RaHcy2XHC26/QVQtJhJnfY+BQxXtR+kE7tEvtDldjA==",
+  "dgSpecHash": "hQbI1DgXb67f1xB+BdIKyo4mcFbZ2FmxtgDxv6Uwd/XFdVBLzwkWK2fTCKiafNjWvR/HrJqp6OsFVB0aNOLIkA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jonathan.meira\\Repositories\\DotNet-Course\\MyHelloWorld\\MyHelloWorld.csproj",
+  "projectFilePath": "C:\\Users\\jonathan.meira\\Repositories\\MyDotNet-Course\\MyHelloWorld\\MyHelloWorld.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jonathan.meira\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\jonathan.meira\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
