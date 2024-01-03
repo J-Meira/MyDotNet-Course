@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 using MyAPIV2.Data;
@@ -6,6 +7,7 @@ using MyAPIV2.Models;
 
 namespace MyAPIV2.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("[controller]")]
 public class UserController : ControllerBase
@@ -30,8 +32,7 @@ public class UserController : ControllerBase
         '{user.LastName}',
         '{user.Email}',
         '{user.Gender}',
-        '{user.Active}'
-    )";
+        1)";
 
     if(_connectionDapper.ExecuteSql(sql)){
       return Ok();
@@ -65,13 +66,14 @@ public class UserController : ControllerBase
   [HttpPut("UpdateById/{userId}")]
   public IActionResult UpdateById(UserDto user, int userId)
   {
+    User userDb = _connectionDapper.LoadSingleData<User>($"SELECT * FROM {_tableName} WHERE [UserId] = {userId}");
     string sql = $@"UPDATE {_tableName}
     SET
         [FirstName] = '{user.FirstName}',
         [LastName] = '{user.LastName}',
         [Email] = '{user.Email}',
         [Gender] = '{user.Gender}',
-        [Active] = '{user.Active}'
+        [Active] = '{userDb.Active}'
     WHERE [UserId] = {userId}";
 
     if(_connectionDapper.ExecuteSql(sql)){
@@ -116,7 +118,7 @@ public class UserController : ControllerBase
   }
 
   [HttpPut("UpdateSalaryById/{userId}")]
-  public IActionResult UpdateSalaryById(UserSalary user, int userId)
+  public IActionResult UpdateSalaryById(UserSalaryDto user, int userId)
   {
     string sql = $@"UPDATE {_salaryTableName}
     SET
@@ -166,7 +168,7 @@ public class UserController : ControllerBase
   }
 
   [HttpPut("UpdateJobInfoById/{userId}")]
-  public IActionResult UpdateJobInfoById(UserJobInfo user, int userId)
+  public IActionResult UpdateJobInfoById(UserJobInfoDto user, int userId)
   {
     string sql = $@"UPDATE {_jobInfoTableJobName}
     SET

@@ -8,11 +8,9 @@ using System.Threading.Tasks;
 
 namespace MyAPIV2.Dtos
 {
-  public partial class UserDto
+  public partial class UserJobInfoDto
   {
-    public string FirstName { get; set; } = "";
-    public string LastName { get; set; } = "";
-    public string Email { get; set; } = "";
-    public string Gender { get; set; } = "";
+    public string JobTitle { get; set; } = "";
+    public string Department { get; set; } = "";
   }
 }

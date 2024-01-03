@@ -8,11 +8,9 @@ using System.Threading.Tasks;
 
 namespace MyAPIV2.Dtos
 {
-  public partial class UserDto
+  public partial class UserSignInConfirmationDto
   {
-    public string FirstName { get; set; } = "";
-    public string LastName { get; set; } = "";
-    public string Email { get; set; } = "";
-    public string Gender { get; set; } = "";
+    public byte[] PasswordHash { get; set; } = new byte[0];
+    public byte[] PasswordSalt { get; set; } = new byte[0];
   }
 }

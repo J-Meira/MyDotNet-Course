@@ -37,6 +37,27 @@ namespace MyAPIV2.Data
       IDbConnection dbConnection = new SqlConnection(_connectionString);
       return dbConnection.Execute(sql);
     }
-    
+
+    public bool ExecuteSqlWithParameters(string sql, List<SqlParameter> parameters)
+    {
+      SqlCommand commandWithParams = new SqlCommand(sql);
+
+      foreach (SqlParameter parameter in parameters)
+      {
+        commandWithParams.Parameters.Add(parameter);
+      }
+
+      SqlConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
+      dbConnection.Open();
+
+      commandWithParams.Connection = dbConnection;
+
+      int rowsAffected = commandWithParams.ExecuteNonQuery();
+
+      dbConnection.Close();
+
+      return rowsAffected > 0;
+    }
+
   }
 }

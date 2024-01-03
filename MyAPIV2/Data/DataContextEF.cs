@@ -12,6 +12,7 @@ namespace MyAPIV2.Data
       _config = config;
     }
 
+    public virtual DbSet<Article> Articles {get; set;}
     public virtual DbSet<User> Users {get; set;}
     public virtual DbSet<UserSalary> UserSalary {get; set;}
     public virtual DbSet<UserJobInfo> UserJobInfo {get; set;}
@@ -29,6 +30,10 @@ namespace MyAPIV2.Data
     {
       modelBuilder.HasDefaultSchema("TutorialAppSchema");
 
+      modelBuilder.Entity<Article>()
+        .ToTable("Articles", "TutorialAppSchema")
+        .HasKey(c => c.ArticleId);
+      
       modelBuilder.Entity<User>()
         .ToTable("Users", "TutorialAppSchema")
         .HasKey(c => c.UserId);

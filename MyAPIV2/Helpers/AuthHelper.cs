@@ -1,0 +1,77 @@
+﻿using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+
+namespace MyAPIV2.Helpers
+{
+  public class AuthHelper
+  {
+    IConfiguration _config;
+    public AuthHelper(IConfiguration config) { 
+      _config = config;
+    }
+
+    public byte[] GetPasswordHash(string password, byte[] passwordSalt)
+    {
+      string passwordSaltPlusString = _config.GetSection("AppSettings:PasswordKey").Value +
+          Convert.ToBase64String(passwordSalt);
+
+      return KeyDerivation.Pbkdf2(
+          password: password,
+          salt: Encoding.ASCII.GetBytes(passwordSaltPlusString),
+          prf: KeyDerivationPrf.HMACSHA256,
+          iterationCount: 1000000,
+          numBytesRequested: 256 / 8
+      );
+    }
+
+    public string CreateToken(int userId, DateTime expires)
+    {
+      Claim[] claims = new Claim[] {
+                new Claim("userId", userId.ToString())
+            };
+
+      string? tokenKeyString = _config.GetSection("AppSettings:TokenKey").Value;
+
+      SymmetricSecurityKey tokenKey = new SymmetricSecurityKey(
+              Encoding.UTF8.GetBytes(
+                  tokenKeyString != null ? tokenKeyString : ""
+              )
+          );
+
+      SigningCredentials credentials = new SigningCredentials(
+              tokenKey,
+              SecurityAlgorithms.HmacSha512Signature
+          );
+
+      SecurityTokenDescriptor descriptor = new SecurityTokenDescriptor()
+      {
+        Subject = new ClaimsIdentity(claims),
+        SigningCredentials = credentials,
+        Expires = expires
+      };
+
+      JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+
+      SecurityToken token = tokenHandler.CreateToken(descriptor);
+
+      return tokenHandler.WriteToken(token);
+
+    }
+
+    public bool CompareTwoHashs(byte[] hashOne, byte[] hashTwo)
+    {
+      for (int i = 0; i < hashOne.Length; i++)
+      {
+        if (hashOne[i] != hashTwo[i])
+        {
+          return false;
+        }
+      }
+      return true;
+    }
+  }
+}
